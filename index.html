@@ -1,0 +1,265 @@
+Sure — here’s a simple, attractive food website in HTML with CSS included. You can save it as `index.html` and open it in a browser.
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie - Nha Nha Food</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fff8f0;
+            color: #333;
+        }
+
+        header {
+            background: #ff6347;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffe0d6;
+        }
+
+        .hero {
+            min-height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(
+                rgba(0,0,0,0.4),
+                rgba(0,0,0,0.4)
+            ),
+            url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff6347;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #e74c32;
+        }
+
+        .section {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 35px;
+            color: #ff6347;
+            margin-bottom: 35px;
+        }
+
+        .food-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .food-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .food-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .food-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .food-card-content {
+            padding: 20px;
+        }
+
+        .food-card h3 {
+            color: #ff6347;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            display: block;
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .about {
+            background: #ffe8dc;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🍴 Foodie</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div>
+            <h1>Delicious Food</h1>
+            <p>Fresh ingredients. Amazing flavors. Happy moments.</p>
+            <a href="#menu" class="btn">Explore Menu</a>
+        </div>
+    </section>
+
+    <section class="section" id="menu">
+        <h2>Our Popular Foods</h2>
+
+        <div class="food-container">
+
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80"
+                     alt="Pizza">
+
+                <div class="food-card-content">
+                    <h3>🍕 Italian Pizza</h3>
+                    <p>Fresh cheese, tomato sauce and delicious toppings.</p>
+                    <span class="price">$12.99</span>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
+                     alt="Burger">
+
+                <div class="food-card-content">
+                    <h3>🍔 Classic Burger</h3>
+                    <p>Juicy beef, fresh vegetables and special sauce.</p>
+                    <span class="price">$9.99</span>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80"
+                     alt="Pasta">
+
+                <div class="food-card-content">
+                    <h3>🍝 Creamy Pasta</h3>
+                    <p>Rich and creamy pasta made with fresh ingredients.</p>
+                    <span class="price">$10.99</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section about" id="about">
+        <h2>About Us</h2>
+
+        <p>
+            Welcome to Foodie! We love creating delicious meals using
+            fresh ingredients and exciting flavors. Our goal is to make
+            every meal special and every customer happy.
+        </p>
+    </section>
+
+    <section class="section" id="contact">
+        <h2>Contact Us</h2>
+
+        <p>📍 123 Food Street, Your City</p>
+        <p>📞 +123 456 789</p>
+        <p>📧 hello@foodie.com</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Foodie. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+```
+
+ You can customize the **restaurant name, colors, food items, prices, images, and contact information** directly in the HTML.
